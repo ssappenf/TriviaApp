@@ -104,7 +104,7 @@ class GameMachine{
             
         }
         else{
-            gameState=GameState(gameStatus: .gameOver, score: gameState.score, currentQuestion: gameState.currentQuestion?.newQuestion())
+            gameState=GameState(gameStatus: .gameOver, score: gameState.score, currentQuestion: nil)
         }
     }
 }
