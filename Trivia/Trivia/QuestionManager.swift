@@ -18,7 +18,9 @@ struct Question{
     func newQuestion() -> Question{
        let url = URL(string: "https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple")
         var returnValue=Question(category: "", question: "", correctAnswer: "", possibleAnswers:[ " "], difficulty: "", type: "")
-        let task = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        let configuration=URLSessionConfiguration.ephemeral
+        let session=URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
+        let task = session.dataTask(with: url!) { (data, response, error) in
            
             if let data = data {
                 do{
@@ -52,7 +54,9 @@ struct Question{
     
         }
         task.resume()
-        RunLoop.main.run()
+        //RunLoop.main.run()
+        print(returnValue)//why is this going before the previous print
+        print("gotHere")
         return returnValue
         
         

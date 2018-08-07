@@ -45,6 +45,7 @@ class QuestionViewController: UIViewController {
     */
     func updateQuestionAndAnswers(){
         AppDelegate.gm.newQuestion()
+        print(AppDelegate.gm.gameState.currentQuestion?.question)
         QuestionLabel.text=AppDelegate.gm.gameState.currentQuestion?.question
     }
 

@@ -18,8 +18,8 @@ class ViewController: UIViewController {
 
     @IBAction func QuestionButtonPressed(_ sender: UIButton) {
         AppDelegate.gm.startGame()
-     AppDelegate.gm.newQuestion()
-        //self.performSegue(withIdentifier: "startGame", sender: self)
+     //AppDelegate.gm.newQuestion()
+        self.performSegue(withIdentifier: "startGame", sender: self)
      
     }
     override func didReceiveMemoryWarning() {
