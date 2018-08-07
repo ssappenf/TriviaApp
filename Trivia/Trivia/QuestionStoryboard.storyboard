@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QvK-Ym-q0w">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Question View Controller-->
+        <scene sceneID="FaK-ig-7wF">
+            <objects>
+                <viewController storyboardIdentifier="QuestionView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QvK-Ym-q0w" customClass="QuestionViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nu4-Re-ssN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kR2-mh-EN6">
+                                <rect key="frame" x="166" y="110" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="8KG-DN-V5l">
+                                <rect key="frame" x="91.5" y="230.5" width="192" height="160"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ymp-ki-HLy">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dmi-mw-xtg">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="QvK-Ym-q0w" eventType="touchUpInside" id="Teh-c5-dMD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zF-dL-wxE">
+                                                <rect key="frame" x="146" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="QvK-Ym-q0w" eventType="touchUpInside" id="8Du-wA-6U5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="vkY-yd-bYr">
+                                        <rect key="frame" x="0.0" y="130" width="192" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O74-qV-97M">
+                                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="QvK-Ym-q0w" eventType="touchUpInside" id="yS8-Ft-JuQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKC-2q-VvU">
+                                                <rect key="frame" x="146" y="0.0" width="46" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="answerButtonPressed:" destination="QvK-Ym-q0w" eventType="touchUpInside" id="qyX-CQ-WKd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kR2-mh-EN6" firstAttribute="centerX" secondItem="nu4-Re-ssN" secondAttribute="centerX" id="25l-Bd-dxp"/>
+                            <constraint firstItem="kR2-mh-EN6" firstAttribute="top" secondItem="ZTQ-ih-Yer" secondAttribute="top" constant="90" id="8pV-Pl-qP9"/>
+                            <constraint firstItem="8KG-DN-V5l" firstAttribute="centerX" secondItem="nu4-Re-ssN" secondAttribute="centerX" id="Ep1-my-hC0"/>
+                            <constraint firstItem="8KG-DN-V5l" firstAttribute="top" secondItem="kR2-mh-EN6" secondAttribute="bottom" constant="100" id="hVo-pg-OcN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZTQ-ih-Yer"/>
+                    </view>
+                    <connections>
+                        <outlet property="ButtonA" destination="Dmi-mw-xtg" id="zAh-Rd-ygZ"/>
+                        <outlet property="ButtonB" destination="5zF-dL-wxE" id="gBx-IC-sFX"/>
+                        <outlet property="ButtonC" destination="O74-qV-97M" id="fOi-72-ew7"/>
+                        <outlet property="ButtonD" destination="PKC-2q-VvU" id="xNr-CX-GYb"/>
+                        <outlet property="QuestionLabel" destination="kR2-mh-EN6" id="Nq4-O3-VGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7aa-09-2ma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="93.599999999999994" y="312.59370314842579"/>
+        </scene>
+    </scenes>
+</document>

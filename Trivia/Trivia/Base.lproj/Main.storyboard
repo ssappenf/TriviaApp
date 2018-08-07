@@ -19,23 +19,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJf-Go-yxf">
-                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="148.5" y="318.5" width="78" height="30"/>
+                                <state key="normal" title="Start Game"/>
                                 <connections>
                                     <action selector="QuestionButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QuL-mP-7lT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Your Knowledge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAg-7J-wk8">
+                                <rect key="frame" x="107" y="120" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solve these trivia ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx8-tQ-vna">
+                                <rect key="frame" x="115.5" y="211" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kJf-Go-yxf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Iuz-zA-c79"/>
+                            <constraint firstItem="aAg-7J-wk8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="vIe-aQ-Cry"/>
                             <constraint firstItem="kJf-Go-yxf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="viV-an-kw6"/>
+                            <constraint firstItem="tx8-tQ-vna" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xw1-jr-lWD"/>
+                            <constraint firstItem="aAg-7J-wk8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yHs-Qz-EPu"/>
+                            <constraint firstItem="tx8-tQ-vna" firstAttribute="top" secondItem="aAg-7J-wk8" secondAttribute="bottom" constant="70" id="yNb-Gx-NUb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="SLN-Fk-8YS" kind="show" identifier="startGame" id="PsI-4D-vbn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--QuestionStoryboard-->
+        <scene sceneID="XNf-tm-Pfe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="QuestionStoryboard" id="SLN-Fk-8YS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPX-s9-ezN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="15"/>
         </scene>
     </scenes>
 </document>

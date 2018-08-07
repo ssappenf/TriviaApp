@@ -14,7 +14,7 @@ struct Question{
     let possibleAnswers:[String]
     let difficulty:String
     let type:String
- 
+    
     func newQuestion() -> Question{
        let url = URL(string: "https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple")
         var returnValue=Question(category: "", question: "", correctAnswer: "", possibleAnswers:[ " "], difficulty: "", type: "")
@@ -38,18 +38,21 @@ struct Question{
                         returnValue = Question(category: tempCat, question: tempQ, correctAnswer: tempCA, possibleAnswers: tempPA, difficulty: tempDif, type: tempType)
                     print(returnValue)
                     
+                    
                 }
+                   
             }  catch let error as NSError {
                 print(error.localizedDescription)
                 
                 }}
          else if let error = error {
             print(error.localizedDescription)
-                
+               
         }
     
         }
         task.resume()
+        RunLoop.main.run()
         return returnValue
         
         
@@ -89,8 +92,9 @@ class GameMachine{
         
     }
     func newQuestion(){
-        gameState=GameState(gameStatus: .playing, score: gameState.score, currentQuestion: gameState.currentQuestion?.newQuestion() )
-        print(gameState.currentQuestion)
+        let test=Question(category: "", question: "", correctAnswer: "", possibleAnswers:[ " "], difficulty: "", type: "")
+        gameState=GameState(gameStatus: .playing, score: gameState.score, currentQuestion: test.newQuestion() )
+        
     }
     func answeredQuestion(answer:String){
         guard case gameState.gameStatus = GameStatus.playing else{return}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E8139B521192E8B00985F6B /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8139B421192E8B00985F6B /* QuestionViewController.swift */; };
+		8E8139B721192EBE00985F6B /* QuestionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E8139B621192EBE00985F6B /* QuestionStoryboard.storyboard */; };
 		8E9E75E72117E7C90069A4BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9E75E62117E7C90069A4BC /* AppDelegate.swift */; };
 		8E9E75E92117E7C90069A4BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9E75E82117E7C90069A4BC /* ViewController.swift */; };
 		8E9E75EC2117E7C90069A4BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9E75EA2117E7C90069A4BC /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E8139B421192E8B00985F6B /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		8E8139B621192EBE00985F6B /* QuestionStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuestionStoryboard.storyboard; sourceTree = "<group>"; };
 		8E9E75E32117E7C90069A4BC /* Trivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9E75E62117E7C90069A4BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E9E75E82117E7C90069A4BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,8 @@
 				8E9E75E62117E7C90069A4BC /* AppDelegate.swift */,
 				8E9E75E82117E7C90069A4BC /* ViewController.swift */,
 				8E9E75EA2117E7C90069A4BC /* Main.storyboard */,
+				8E8139B421192E8B00985F6B /* QuestionViewController.swift */,
+				8E8139B621192EBE00985F6B /* QuestionStoryboard.storyboard */,
 				8E9E75ED2117E7CB0069A4BC /* Assets.xcassets */,
 				8E9E75EF2117E7CB0069A4BC /* LaunchScreen.storyboard */,
 				8E9E75F22117E7CB0069A4BC /* Info.plist */,
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9E75F12117E7CB0069A4BC /* LaunchScreen.storyboard in Resources */,
+				8E8139B721192EBE00985F6B /* QuestionStoryboard.storyboard in Resources */,
 				8E9E75EE2117E7CB0069A4BC /* Assets.xcassets in Resources */,
 				8E9E75EC2117E7C90069A4BC /* Main.storyboard in Resources */,
 			);
@@ -261,6 +268,7 @@
 			files = (
 				8E9E75E92117E7C90069A4BC /* ViewController.swift in Sources */,
 				8E9E75E72117E7C90069A4BC /* AppDelegate.swift in Sources */,
+				8E8139B521192E8B00985F6B /* QuestionViewController.swift in Sources */,
 				8E9E76172117E9A50069A4BC /* QuestionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

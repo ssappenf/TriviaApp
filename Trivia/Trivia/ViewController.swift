@@ -9,17 +9,17 @@
 import UIKit
 import Foundation
 class ViewController: UIViewController {
-    var gm = GameMachine()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        gm.startGame()
+        
      }
 
     @IBAction func QuestionButtonPressed(_ sender: UIButton) {
-   
-        gm.newQuestion()
-       // print(gm.gameState.currentQuestion)
+        AppDelegate.gm.startGame()
+     AppDelegate.gm.newQuestion()
+        //self.performSegue(withIdentifier: "startGame", sender: self)
      
     }
     override func didReceiveMemoryWarning() {
