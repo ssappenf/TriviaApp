@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//ask eksanie for help on ui because you dont know what ur doing
 struct Question{
     let category:String
     let question:String
@@ -18,8 +19,9 @@ struct Question{
     func newQuestion() -> Question{
        let url = URL(string: "https://opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple")
         var returnValue=Question(category: "", question: "", correctAnswer: "", possibleAnswers:[ " "], difficulty: "", type: "")
-        let configuration=URLSessionConfiguration.ephemeral
+        let configuration=URLSessionConfiguration.ephemeral//figure out what this does
         let session=URLSession(configuration: configuration, delegate: nil, delegateQueue: OperationQueue.main)
+        //reps actual connection with server
         let task = session.dataTask(with: url!) { (data, response, error) in
            
             if let data = data {
@@ -38,9 +40,9 @@ struct Question{
                          let tempDif=resultsDict["difficulty"] as! String
                          let tempType=resultsDict["type"] as! String
                         returnValue = Question(category: tempCat, question: tempQ, correctAnswer: tempCA, possibleAnswers: tempPA, difficulty: tempDif, type: tempType)
-                    print(returnValue)
-                    
-                    
+                    print(returnValue)//this should be printing first but its printing after
+                        //need to break here to exit the loop maybe?idk//cant return since void function can i make it nonvoid?
+                    //ask poonam or somebody about completions/internet says they work but not on xcode anymore
                 }
                    
             }  catch let error as NSError {
@@ -53,7 +55,7 @@ struct Question{
         }
     
         }
-        task.resume()
+        task.resume()//is this why its looping back afterward?
         //RunLoop.main.run()
         print(returnValue)//why is this going before the previous print
         print("gotHere")
@@ -111,5 +113,6 @@ class GameMachine{
             gameState=GameState(gameStatus: .gameOver, score: gameState.score, currentQuestion: nil)
         }
     }
+    //maybe set it up so it could be multiplayer
 }
 
